@@ -163,6 +163,7 @@ img{
     display: flex;
     justify-content: flex-end;
     padding-inline-end: 2em;
+    
 }
 
 .message-container-left{
@@ -173,14 +174,23 @@ img{
 }
 
 
+
+
 .message{
     width: 300px;
     border-radius: 20px;
     background-color: white;
-    padding: .4em;
+    padding: .7em;
     position: relative;
     font-size: 12px;
 }
+
+.message.user{
+    background-color: rgba(213,249,186,255);
+}
+
+
+
 
 .down{
     position: absolute;

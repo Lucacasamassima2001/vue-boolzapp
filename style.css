@@ -16,6 +16,8 @@ body{
     margin-top: 50px;
     margin-bottom: 50px;
     display: flex;
+    background-color: white;
+    padding: .2em;
 }
 
 /* INIZIO PARTE PROFILO/CONTATTI */
@@ -116,6 +118,7 @@ img{
     display: flex;
     align-items: center;
     position: relative;
+    cursor: pointer;
 }
 
 .contact-card:hover{
@@ -142,8 +145,9 @@ img{
     /* INIZIO PARTE CHAT */
 .chat{
     width: 60%;
-    height: 1100px;
+    height: 1060px;
     background-image: url(img/mine.jpg);
+    position: relative;
 }
 
 .actual-user{
@@ -175,4 +179,47 @@ img{
     border-radius: 20px;
     background-color: white;
     padding: .4em;
+    position: relative;
+    font-size: 12px;
+}
+
+.down{
+    position: absolute;
+    top: 2px;
+    right: 20px;
+    color: grey;
+    cursor: pointer;
+}
+
+.message-date{
+    position: absolute;
+    bottom: 2px;
+    right: 20px;
+    color: grey;
+}
+
+.type-message{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding-inline: 1em;
+}
+
+.type-bar{
+    width: 90%;
+    height: 40px;
+    padding-inline-start: .5em;
+}
+
+
+.type-message>i{
+    font-size: 25px;
+    color: grey;
+    cursor: pointer;
 }

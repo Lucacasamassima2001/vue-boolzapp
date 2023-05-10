@@ -12,6 +12,9 @@
 <body>
     <div id="app">
         <div class="container">
+
+            <!-- START CONTACT LIST + USER-PROFILE -->
+
             <div class="contacts-container">
                 <div class="user-profile">
                     <div class="user">
@@ -46,6 +49,10 @@
                     <div class="date">{{contact.messages[contact.messages.length - 1].date}}</div>
                 </div>
             </div>
+
+
+            <!-- START CHAT  -->
+
             <div class="chat">
                 <div class="actual-user">
                     <div class="user">
@@ -59,13 +66,27 @@
                     </div>
                 </div>
                 <div class="message-container-right">
-                    <div class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tenetur laudantium distinctio libero.</div>
+                    <div class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tenetur laudantium distinctio libero.
+                        <div class="down"><i class="fa-solid fa-sort-down"></i></div>
+                        <div class="message-date">11:11</div>
+                    </div>
                 </div>
                 <div class="message-container-right">
-                    <div class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tenetur laudantium distinctio libero.</div>
+                    <div class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tenetur laudantium distinctio libero.
+                        <div class="down"><i class="fa-solid fa-sort-down"></i></div>
+                        <div class="message-date">11:11</div>
+                    </div>
                 </div>
                 <div class="message-container-left">
-                    <div class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tenetur laudantium distinctio libero.</div>
+                    <div class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tenetur laudantium distinctio libero.
+                        <div class="down"><i class="fa-solid fa-sort-down"></i></div>
+                        <div class="message-date">11:11</div>
+                    </div>
+                </div>
+                <div class="type-message">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <input class="type-bar" type="text" placeholder="Scrivi un nuovo messaggio...">
+                    <i class="fa-solid fa-microphone"></i>
                 </div>
             </div>
         </div>

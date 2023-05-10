@@ -5,16 +5,17 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
+body{
+    background-image: linear-gradient(to bottom,
+    #009688 20%, #dbdbd3 20%);
+}
 
 .container{
     width: 80%;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
-    background-color: red;
     display: flex;
-    border: 1px solid black;
 }
 
 /* INIZIO PARTE PROFILO/CONTATTI */
@@ -141,6 +142,37 @@ img{
     /* INIZIO PARTE CHAT */
 .chat{
     width: 60%;
+    height: 1100px;
+    background-image: url(img/mine.jpg);
+}
+
+.actual-user{
     height: 100px;
-    background-color: green;
+    display: flex;
+    background-color: rgba(234,234,234,255);
+    align-items: center;
+    justify-content: space-between;
+    padding-inline-end: 2em;
+}
+
+.message-container-right{
+    margin-top: 1em;
+    display: flex;
+    justify-content: flex-end;
+    padding-inline-end: 2em;
+}
+
+.message-container-left{
+    margin-top: 1em;
+    display: flex;
+    justify-content: flex-start;
+    padding-inline-start: 2em;
+}
+
+
+.message{
+    width: 300px;
+    border-radius: 20px;
+    background-color: white;
+    padding: .4em;
 }

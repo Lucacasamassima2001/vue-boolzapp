@@ -125,7 +125,7 @@ img{
     cursor: pointer;
 }
 
-.contact-card:hover{
+.contact-card:active{
     background-color: lightgray;
 }
 
@@ -196,7 +196,7 @@ img{
     width: 300px;
     border-radius: 20px;
     background-color: white;
-    padding: .7em;
+    padding: 1.5em;
     position: relative;
     font-size: 12px;
 }
@@ -204,10 +204,14 @@ img{
 
 
 
-.message.user{
+.green{
     background-color: rgba(213,249,186,255);
 }
 
+
+.blank{
+    background-color: white;
+}
 
 
 
@@ -223,6 +227,7 @@ img{
 
 .message-date{
     position: absolute;
+    font-size: 10px;
     bottom: 2px;
     right: 20px;
     color: grey;

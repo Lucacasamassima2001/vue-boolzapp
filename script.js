@@ -2,6 +2,7 @@ const app = Vue.createApp({
     data(){ //or function() 
   
        return {
+
         user: {
             name: 'Luca',
             avatar: './img/avatar_io.jpg',
@@ -16,7 +17,9 @@ const app = Vue.createApp({
                     {
                         date: '10/01/2020 15:30:55',
                         message: 'Hai portato a spasso il cane?',
-                        status: 'sent'
+                        status: 'sent',
+                        mexSent: true,
+
                     },
                     {
                         date: '10/01/2020 15:50:00',
@@ -181,6 +184,7 @@ const app = Vue.createApp({
         showChat(index){
             this.activeIndex = index
         },
+        
          
     },
     

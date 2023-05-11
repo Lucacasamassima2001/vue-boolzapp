@@ -163,7 +163,7 @@ img{
     background-image: url(img/mine.jpg);
     height: 430px;
     padding-bottom: 2em;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 .actual-user{
     height: 100px;
@@ -175,12 +175,13 @@ img{
 }
 
 .message-sent{
-    margin-top: 1em;
+    margin-top: 1.2em;
     display: flex;
     justify-content: flex-end;
     padding-inline-end: 2em;
-    
+    padding-bottom: 1.2em;
 }
+
 
 .message-received{
     margin-top: 1em;
@@ -193,44 +194,30 @@ img{
 
 
 .message{
-    width: 300px;
     border-radius: 20px;
     background-color: white;
-    padding: 1.5em;
-    position: relative;
+    padding-inline: 1em;
     font-size: 12px;
-}
-
-
-
-
-.green{
     background-color: rgba(213,249,186,255);
 }
-
-
-.blank{
-    background-color: white;
-}
-
 
 
 
 
 .down{
-    position: absolute;
-    top: 2px;
-    right: 20px;
     color: grey;
     cursor: pointer;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 5px;
+    margin-left: 10px;
 }
 
 .message-date{
-    position: absolute;
-    font-size: 10px;
-    bottom: 2px;
-    right: 20px;
+    font-size: 8px;
     color: grey;
+    display: flex;
+    justify-content: end;
 }
 
 .type-message{

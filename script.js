@@ -178,7 +178,7 @@ const app = Vue.createApp({
         newMexSent: {
             date: '',
             message: '',
-            status: 'received'
+            status: 'sent'
         },
 
         

@@ -178,8 +178,8 @@ const app = Vue.createApp({
 
     methods: {
 
-        showChat(){
-            
+        showChat(index){
+            this.activeIndex = index
         },
          
     },

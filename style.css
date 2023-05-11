@@ -146,6 +146,10 @@ img{
 }
 
 
+.last-mex{
+    text-overflow: ellipsis;
+}
+
 
     /* INIZIO PARTE CHAT */
 .chat{
@@ -250,3 +254,7 @@ img{
     cursor: pointer;
 }
 
+
+.active{
+    display: block;
+}

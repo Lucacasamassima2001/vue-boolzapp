@@ -61,8 +61,8 @@
             <div class="chat">
                 <div class="actual-user">
                     <div class="user">
-                        <img :src="user.avatar" alt="">
-                        <div class="username">{{user.name}}</div>
+                        <img :src="contacts[activeIndex].avatar" alt="">
+                        <div class="username">{{contacts[activeIndex].name}}</div>
                     </div>
                     <div class="user-icons">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -71,24 +71,13 @@
                     </div>
                 </div>
                 <div class="chat-scroll">
-                    <div  class="message-sent" alt="">
-                        <div class="message user" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tenetur laudantium distinctio libero.
+                    <div v-for="message in contacts[activeIndex].messages" class="message-sent" alt="">
+                        <div  class="message user" >{{ message.message }} 
                             <div class="down"><i class="fa-solid fa-sort-down"></i></div>
                             <div class="message-date">11:11</div>
                         </div>
                     </div>
-                    <div  class="message-sent" alt="">
-                        <div class="message user" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tenetur laudantium distinctio libero.
-                            <div class="down"><i class="fa-solid fa-sort-down"></i></div>
-                            <div class="message-date">11:11</div>
-                        </div>
-                    </div>
-                    <div class="message-received">
-                        <div class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tenetur laudantium distinctio libero.
-                            <div class="down"><i class="fa-solid fa-sort-down"></i></div>
-                            <div class="message-date">11:11</div>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div class="type-message">
                     <i class="fa-regular fa-face-smile"></i>

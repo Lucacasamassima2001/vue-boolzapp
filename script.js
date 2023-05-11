@@ -2,12 +2,11 @@ const app = Vue.createApp({
     data(){ //or function() 
   
        return {
-            
         user: {
             name: 'Luca',
             avatar: './img/avatar_io.jpg',
         },
-
+        activeIndex:0,
         contacts: [
             {
                 name: 'Michele',
@@ -170,11 +169,16 @@ const app = Vue.createApp({
                     }
                 ],
             }
-        ]
+        ],
        }
     },
+    
 
     methods: {
+
+        showChat(){
+            
+        },
          
     },
     
@@ -182,3 +186,5 @@ const app = Vue.createApp({
    
    
    app.mount(`#app`);
+
+   

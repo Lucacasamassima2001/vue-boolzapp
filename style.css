@@ -6,15 +6,16 @@
 }
 
 body{
+    height: 100vh;
     background-image: linear-gradient(to bottom,
     #009688 20%, #dbdbd3 20%);
+    padding-top: 80px;
 }
 
 .container{
     width: 80%;
+    height: 600px;
     margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
     display: flex;
     background-color: white;
 }
@@ -24,9 +25,13 @@ body{
 .contacts-container{
     width: 40%;
     height: 100%;
-    background-color: blue;
 }
 
+
+.contacts{
+    overflow-y: scroll;
+    height: 340px;
+}
 .user-profile{
     height: 100px;
     display: flex;
@@ -132,11 +137,12 @@ img{
     font-size: 20px;
 }
 .date{
-    width: 60px;
     height: 20px;
     position: absolute;
     top: 30px;
-    right: 0;
+    right: 5px;
+    font-size: 12px;
+    color: grey;
 }
 
 
@@ -144,11 +150,17 @@ img{
     /* INIZIO PARTE CHAT */
 .chat{
     width: 60%;
-    height: 1060px;
-    background-image: url(img/mine.jpg);
+    height: 100%;
     position: relative;
 }
 
+
+.chat-scroll{
+    background-image: url(img/mine.jpg);
+    height: 430px;
+    padding-bottom: 2em;
+    overflow-y: auto;
+}
 .actual-user{
     height: 100px;
     display: flex;
@@ -185,9 +197,14 @@ img{
     font-size: 12px;
 }
 
+
+
+
 .message.user{
     background-color: rgba(213,249,186,255);
 }
+
+
 
 
 
@@ -232,3 +249,4 @@ img{
     color: grey;
     cursor: pointer;
 }
+

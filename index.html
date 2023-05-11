@@ -42,14 +42,17 @@
                     <div><i class="fa-solid fa-magnifying-glass"></i></div>
                     <input class="search-bar" type="text" placeholder="Cerca o inizia una nuova chat...">
                 </div>
-                <div v-for="(contact, i) in contacts" class="contact-card">
-                    <img :src="contact.avatar" alt="">
-                    <div class="text">
-                        <div class="contact-name">{{contact.name}}</div>
-                        <div style="color: grey; font-size: 14px;">{{contact.messages[contact.messages.length - 1].message}}...</div>
+                <div class="contacts">
+                    <div v-for="(contact, index) in contacts" class="contact-card">
+                        <img :src="contact.avatar" alt="">
+                        <div class="text">
+                            <div class="contact-name">{{contact.name}}</div>
+                            <div style="color: grey; font-size: 14px;">{{contact.messages[contact.messages.length - 1].message}}...</div>
+                        </div>
+                        <div class="date">{{contact.messages[contact.messages.length - 1].date}}</div>
                     </div>
-                    <div class="date">{{contact.messages[contact.messages.length - 1].date}}</div>
                 </div>
+                
             </div>
 
 
@@ -67,22 +70,42 @@
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </div>
-                <div class="message-container-right">
-                    <div class="message user">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tenetur laudantium distinctio libero.
-                        <div class="down"><i class="fa-solid fa-sort-down"></i></div>
-                        <div class="message-date">11:11</div>
+                <div class="chat-scroll">
+                    <div  class="message-container-right" alt="">
+                        <div class="message user" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tenetur laudantium distinctio libero.
+                            <div class="down"><i class="fa-solid fa-sort-down"></i></div>
+                            <div class="message-date">11:11</div>
+                        </div>
                     </div>
-                </div>
-                <div class="message-container-right">
-                    <div class="message user">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tenetur laudantium distinctio libero.
-                        <div class="down"><i class="fa-solid fa-sort-down"></i></div>
-                        <div class="message-date">11:11</div>
+                    <div  class="message-container-right" alt="">
+                        <div class="message user" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tenetur laudantium distinctio libero.
+                            <div class="down"><i class="fa-solid fa-sort-down"></i></div>
+                            <div class="message-date">11:11</div>
+                        </div>
                     </div>
-                </div>
-                <div class="message-container-left">
-                    <div class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tenetur laudantium distinctio libero.
-                        <div class="down"><i class="fa-solid fa-sort-down"></i></div>
-                        <div class="message-date">11:11</div>
+                    <div class="message-container-right">
+                        <div class="message user">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tenetur laudantium distinctio libero.
+                            <div class="down"><i class="fa-solid fa-sort-down"></i></div>
+                            <div class="message-date">11:11</div>
+                        </div>
+                    </div>
+                    <div class="message-container-left">
+                        <div class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tenetur laudantium distinctio libero.
+                            <div class="down"><i class="fa-solid fa-sort-down"></i></div>
+                            <div class="message-date">11:11</div>
+                        </div>
+                    </div>
+                    <div class="message-container-left">
+                        <div class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tenetur laudantium distinctio libero.
+                            <div class="down"><i class="fa-solid fa-sort-down"></i></div>
+                            <div class="message-date">11:11</div>
+                        </div>
+                    </div>
+                    <div class="message-container-left">
+                        <div class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tenetur laudantium distinctio libero.
+                            <div class="down"><i class="fa-solid fa-sort-down"></i></div>
+                            <div class="message-date">11:11</div>
+                        </div>
                     </div>
                 </div>
                 <div class="type-message">

@@ -170,7 +170,7 @@ img{
     padding-inline-end: 2em;
 }
 
-.message-container-right{
+.message-sent{
     margin-top: 1em;
     display: flex;
     justify-content: flex-end;
@@ -178,7 +178,7 @@ img{
     
 }
 
-.message-container-left{
+.message-received{
     margin-top: 1em;
     display: flex;
     justify-content: flex-start;

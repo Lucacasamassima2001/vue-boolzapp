@@ -173,8 +173,20 @@ const app = Vue.createApp({
                 ],
             }
         ],
+        
+        
+        newMexSent: {
+            date: '',
+            message: '',
+            status: 'received'
+        },
 
         
+        newMexReceived : {
+            date: '',
+            message: 'ok',
+            status: 'received'
+        }
        }
     },
     
@@ -184,8 +196,24 @@ const app = Vue.createApp({
         showChat(index){
             this.activeIndex = index
         },
+
+        addMex() {
+            let now = new Date();
+            this.newMexSent.date  = now.getHours() + ':' + now.getMinutes();
+            this.newMexReceived.date  = now.getHours() + ':' + now.getMinutes();
+            this.contacts[this.activeIndex].messages.push(this.newMexSent),
+            
+            this.newMexSent = {
+                        date: '',
+                        message: '',
+                        status: 'sent'
+            }
+            setTimeout(() => {
+                this.contacts[this.activeIndex].messages.push(this.newMexReceived)
+            }, 2000)
+        },
         
-         
+        
     },
     
    });

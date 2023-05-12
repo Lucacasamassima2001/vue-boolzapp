@@ -197,7 +197,7 @@ const app = Vue.createApp({
             this.activeIndex = index
         },
 
-        addMex() {
+        addMex(activeIndex) {
             let now = new Date();
             this.newMexSent.date  = now.getHours() + ':' + now.getMinutes();
             this.newMexReceived.date  = now.getHours() + ':' + now.getMinutes();
@@ -212,6 +212,8 @@ const app = Vue.createApp({
                 this.contacts[this.activeIndex].messages.push(this.newMexReceived)
             }, 2000)
         },
+
+        
         
         
     },

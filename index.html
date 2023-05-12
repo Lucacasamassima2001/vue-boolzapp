@@ -39,15 +39,15 @@
                     </div>
                 </div>
                 <div class="search">
-                    <div><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
                     <input class="search-bar" type="text" placeholder="Cerca o inizia una nuova chat...">
                 </div>
                 <div class="contacts">
                     <div v-for="(contact, index) in contacts" class="contact-card" @click="showChat(index)">
                         <img :src="contact.avatar" alt="">
-                        <div class="text">
+                        <div class="text-contact">
                             <div class="contact-name">{{contact.name}}</div>
-                            <div style="color: grey; font-size: 14px;">{{contact.messages[contact.messages.length - 1].message}}...</div>
+                            <div class="last-text" style="color: grey; font-size: 14px;">{{contact.messages[contact.messages.length - 1].message}}</div>
                         </div>
                         <div class="date">{{contact.messages[contact.messages.length - 1].date}}</div>
                     </div>
@@ -71,17 +71,17 @@
                     </div>
                 </div>
                 <div class="chat-scroll">
-                    <div v-for="message in contacts[activeIndex].messages" class="message-sent" alt="">
+                    <div v-for="message in contacts[activeIndex].messages" class="sent" :class="message.status" alt="">
                         <div class="message">
                             <span class="down"><i class="fa-solid fa-sort-down"></i></span>
-                            <span class="text-message">{{ message.message }} </span>
+                            <span class="text-message"><p>{{ message.message }}</p></span>
                         <div class="message-date">{{message.date}} </div>
                         </div>
                     </div>
                 </div>
                 <div class="type-message">
                     <i class="fa-regular fa-face-smile"></i>
-                    <input class="type-bar" type="text" placeholder="Scrivi un nuovo messaggio..." v-model="newMexSent.message" @keyup.enter="addMex()">
+                    <input class="type-bar" type="text" placeholder="Scrivi un nuovo messaggio..." v-model="newMexSent.message" @keyup.enter="addMex(activeIndex)">
                     <i class="fa-solid fa-microphone"></i>
                 </div>
             </div>

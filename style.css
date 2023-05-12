@@ -13,7 +13,6 @@ body{
 }
 
 .container{
-    width: 80%;
     height: 600px;
     margin: auto;
     display: flex;
@@ -102,6 +101,7 @@ img{
     align-items: center;
     gap: 1em;
     padding-inline: 1em;
+    outline: none;
 }
 
 .fa-magnifying-glass{
@@ -129,10 +129,17 @@ img{
     background-color: lightgray;
 }
 
-.text{
+.text-contact{
+    min-width: 0;
     margin-left: 1em;
 }
 
+
+.last-text{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .contact-name{
     font-size: 20px;
 }
@@ -164,6 +171,8 @@ img{
     height: 430px;
     padding-bottom: 2em;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
 }
 .actual-user{
     height: 100px;
@@ -174,33 +183,37 @@ img{
     padding-inline-end: 2em;
 }
 
-.message-sent{
+.sent{
     margin-top: 1.2em;
     display: flex;
     justify-content: flex-end;
     padding-inline-end: 2em;
     padding-bottom: 1.2em;
+    margin-left: 250px
 }
 
 
-.message-received{
-    margin-top: 1em;
+.received{
+    margin-top: 1.2em;
     display: flex;
     justify-content: flex-start;
-    padding-inline-start: 2em;
+    padding-inline-end: 2em;
+    padding-bottom: 1.2em;
+    margin-left: 30px;
 }
 
 
 
 
 .message{
+    float: right;
     border-radius: 20px;
     background-color: white;
     padding-inline: 1em;
     font-size: 12px;
     background-color: rgba(213,249,186,255);
+    min-width: 100px;
 }
-
 
 
 

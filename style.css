@@ -185,40 +185,28 @@ img{
 
 .sent{
     margin-top: 1.2em;
-    display: flex;
-    justify-content: flex-end;
-    padding-inline-end: 2em;
-    padding-bottom: 1.2em;
-    margin-left: 250px
+    padding-inline-start: 2em;
+    padding-inline-end: 1em;
+    margin-left: 450px;
+    margin-right: 1em;
+    background-color: rgba(213,249,186,255);
+    border-radius: 20px;
 }
 
 
 .received{
     margin-top: 1.2em;
-    display: flex;
-    justify-content: flex-start;
     padding-inline-end: 2em;
-    padding-bottom: 1.2em;
-    margin-left: 30px;
-}
-
-
-
-
-.message{
-    float: right;
-    border-radius: 20px;
+    padding-inline-start: 1em;
+    margin-right: 450px;
+    margin-left: 1em;
     background-color: white;
-    padding-inline: 1em;
-    font-size: 12px;
-    background-color: rgba(213,249,186,255);
-    min-width: 100px;
+    border-radius: 20px;
 }
 
 
 
-.down{
-    color: grey;
+.dropdown{
     cursor: pointer;
     display: flex;
     justify-content: end;
@@ -226,6 +214,10 @@ img{
     margin-left: 10px;
 }
 
+
+.dropdown-toggle{
+    color: grey;
+}
 .message-date{
     font-size: 8px;
     color: grey;

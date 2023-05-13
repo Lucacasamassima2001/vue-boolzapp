@@ -46,13 +46,16 @@
                     <input v-model="searchText"   class="search-bar" type="text" placeholder="Cerca o inizia una nuova chat...">
                 </div>
                 <div class="contacts">
-                    <div v-for="(contact, index) in filterContact" class="contact-card" @click="showChat(index)">
+                    <div v-for="(contact, index) in filterContact" 
+                    class="contact-card"
+                    @click="showChat(contact)"
+                    :key="contact.name">
                         <img :src="contact.avatar" alt="">
                         <div class="text-contact">
                             <div class="contact-name">{{contact.name}}</div>
                             <div class="last-text" style="color: grey; font-size: 14px;">{{contact.messages[contact.messages.length - 1].message}}</div>
                         </div>
-                        <div class="date">{{contact.messages[contact.messages.length - 1].date}}</div>
+                        <div class="date">{{contact.messages[contact.messages.length - 1].date.slice(0,11)}}</div>
                     </div>
                 </div>
                 
@@ -85,7 +88,7 @@
                                 </ul>
                             </div>
                             <span class="text-message"><p>{{ message.message }}</p></span>
-                        <div class="message-date">{{(message.date)}} </div>
+                        <div class="message-date">{{(message.date.slice(10,16))}} </div>
                         </div>
                     </div>
                 </div>

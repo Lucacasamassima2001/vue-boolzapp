@@ -8,13 +8,12 @@ const app = Vue.createApp({
             avatar: './img/avatar_io.jpg',
         },
         activeIndex:0,
-        search: "",
+        searchText : '',
         contacts: [
             {
                 name: 'Michele',
                 avatar: './img/avatar_1.jpg',
                 visible: true,
-                search: "",
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -177,6 +176,7 @@ const app = Vue.createApp({
         ],
         
         
+        
         newMexSent: {
             date: '',
             message: '',
@@ -189,16 +189,18 @@ const app = Vue.createApp({
             message: 'ok',
             status: 'received'
         },
-
-        searchText : '',
+        
        }
     },
     
 
     methods: {
 
-        showChat(index){
-            this.activeIndex = index
+
+
+        showChat(index) {
+            this.activeIndex = this.contacts.indexOf(index);
+            
         },
 
         addMex() {
@@ -217,22 +219,9 @@ const app = Vue.createApp({
             }, 2000)
         },
 
-            // METODO PER RIMUOVERE MESSAGGIO, TO DO ULTIMO MESSAGGIO NON SI ELIMINA
             removeMex(i){
                 this.contacts[this.activeIndex].messages.splice(i , 1);
             },
-
-
-            
-            
-          
-		
-
-        
-        // extractTimefromdate(date){
-        //     return date.split(" ")[1].slice(0 , -3)
-        // }
-          
     },
     computed: {
         
@@ -242,6 +231,8 @@ const app = Vue.createApp({
 
             })
         },
+
+
     }
    });
    
@@ -251,6 +242,6 @@ const app = Vue.createApp({
 
 
 
-//    TO DO SEARCH BAR / DELETE MEX / INDEX FIX ON RECEVIED
+//    TO FIX  DELETE MEX / INDEX FIX ON RECEVIED / DROPWDOWN INFO
 
    

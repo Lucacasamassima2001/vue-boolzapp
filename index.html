@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Boolzapp</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
     <script src="script.js" defer></script>
@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                     <input v-model="searchText"   class="search-bar" type="text" placeholder="Cerca o inizia una nuova chat...">
                 </div>
                 <div class="contacts">
@@ -77,16 +77,14 @@
                     </div>
                 </div>
                 <div class="chat-scroll">
-                    <div v-for="(message, i) in contacts[activeIndex].messages"  :class="message.status" alt="">
+                    <div :key="visible" v-for="(message, i) in filterContact[activeIndex].messages"  :class="message.status" alt="">
                         <div >
                             <div class="dropdown">
                                 <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a @click="removeMex(i)" class="dropdown-item" >Elimina messaggio</a></li>
-                                    <span class="dropdown-item">Info Messaggio:</span>
-                                    
-                                    
+                                    <li><a  @click="removeMex(i)" class="dropdown-item" >Elimina messaggio</a></li>
+                                    <span class="status">Info Messaggio:</span>
                                     <span class="hide">"{{message.status}}" at {{message.date.slice(11,16)}} </span>
                                 </ul>
                             </div>
@@ -95,6 +93,9 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- INPUT PER NUOVO MESSAGGIO -->
+
                 <div class="type-message">
                     <i class="fa-regular fa-face-smile"></i>
                     <input class="type-bar" type="text" placeholder="Scrivi un nuovo messaggio..." v-model="newMexSent.message" @keyup.enter="addMex()">

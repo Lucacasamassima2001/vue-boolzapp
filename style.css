@@ -101,9 +101,14 @@ img{
     align-items: center;
     gap: 1em;
     padding-inline: 1em;
-    outline: none;
+    border: 2px solid rgba(142,218,252,255);
 }
 
+
+.search:focus-within{
+    outline: auto;
+
+}
 .fa-magnifying-glass{
     font-size: 25px;
     color: grey;
@@ -113,8 +118,16 @@ img{
 .search-bar{
     width: 100%;
     height: 40px;
-    padding-inline-start: .5em;
+    padding-inline-start: .2em;
+    border: none;
+    font-size: 18px;
 }
+
+
+.search-bar:focus{
+    outline: none;
+}
+
 
 .contact-card{
     height: 100px;
@@ -204,7 +217,7 @@ img{
     border-radius: 20px;
 }
 
-
+/* SEZIONE DROPDOWN REMOVE AND INFO ON MESSAGE */
 
 .dropdown{
     cursor: pointer;
@@ -224,6 +237,8 @@ img{
     display: flex;
     justify-content: end;
 }
+
+/* SEZIONE INPUT PER NUOVO MESSAGGIO */
 
 .type-message{
     width: 100%;
@@ -255,7 +270,13 @@ img{
     display: none;
 }
 
-.dropdown-item:hover + .hide{
+
+
+.status{
+    margin-left: 1em;
+    cursor: context-menu;
+}
+.status:hover + .hide{
     display:flex;
     padding: 1em;
 }

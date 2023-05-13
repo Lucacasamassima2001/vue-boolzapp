@@ -175,8 +175,6 @@ const app = Vue.createApp({
             }
         ],
         
-        
-        
         newMexSent: {
             date: '',
             message: '',
@@ -204,9 +202,9 @@ const app = Vue.createApp({
         },
 
         addMex() {
-            let now = new Date();
-            this.newMexSent.date  = now.getHours() + ':' + now.getMinutes();
-            this.newMexReceived.date  = now.getHours() + ':' + now.getMinutes();
+            let ActualTime = luxon.DateTime;
+            this.newMexSent.date  = ActualTime.now().toFormat('dd/MM/yyyy HH:mm:ss');
+            this.newMexReceived.date  = ActualTime.now().toFormat('dd/MM/yyyy HH:mm:ss');
             this.contacts[this.activeIndex].messages.push(this.newMexSent),
             
             this.newMexSent = {
@@ -228,6 +226,8 @@ const app = Vue.createApp({
     },
     computed: {
         
+        // ARRAY DEI CONTATTI FILTRATO PER LA SEARCH BAR
+
         filterContact() {
             return this.contacts.filter((contacts) => {
                 return contacts.name.toLowerCase().includes(this.searchText.toLowerCase());
@@ -245,6 +245,6 @@ const app = Vue.createApp({
 
 
 
-//    TO FIX  DELETE MEX / INDEX FIX ON RECEVIED / DROPWDOWN INFO / INCOMING MESSAGE DATE
+//    TO FIX  DELETE MEX / INDEX FIX ON RECEVIED 
 
    

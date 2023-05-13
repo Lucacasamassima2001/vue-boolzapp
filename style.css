@@ -251,7 +251,11 @@ img{
     cursor: pointer;
 }
 
+.hide{
+    display: none;
+}
 
-.active{
-    display: block;
+.dropdown-item:hover + .hide{
+    display:flex;
+    padding: 1em;
 }

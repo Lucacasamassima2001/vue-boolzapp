@@ -222,6 +222,9 @@ const app = Vue.createApp({
             removeMex(i){
                 this.contacts[this.activeIndex].messages.splice(i , 1);
             },
+
+            
+            
     },
     computed: {
         
@@ -242,6 +245,6 @@ const app = Vue.createApp({
 
 
 
-//    TO FIX  DELETE MEX / INDEX FIX ON RECEVIED / DROPWDOWN INFO
+//    TO FIX  DELETE MEX / INDEX FIX ON RECEVIED / DROPWDOWN INFO / INCOMING MESSAGE DATE
 
    

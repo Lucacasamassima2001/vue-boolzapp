@@ -83,8 +83,11 @@
                                 <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a @click="removeMex(i)" class="dropdown-item" href="#">Elimina messaggio</a></li>
-                                    <li><a class="dropdown-item" href="#">Info Messaggio: {{message.status}} </a></li>
+                                    <li><a @click="removeMex(i)" class="dropdown-item" >Elimina messaggio</a></li>
+                                    <span class="dropdown-item">Info Messaggio:</span>
+                                    
+                                    
+                                    <span class="hide">"{{message.status}}" at {{message.date.slice(11,16)}} </span>
                                 </ul>
                             </div>
                             <span class="text-message"><p>{{ message.message }}</p></span>

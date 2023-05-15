@@ -19,8 +19,6 @@ const app = Vue.createApp({
                         date: '10/01/2020 15:30:55',
                         message: 'Hai portato a spasso il cane?',
                         status: 'sent',
-                        mexSent: true,
-
                     },
                     {
                         date: '10/01/2020 15:50:00',
@@ -210,10 +208,11 @@ const app = Vue.createApp({
             this.newMexSent = {
                         date: '',
                         message: '',
-                        status: 'sent'
+                        status: 'sent',
             }
+            let chatindex = this.activeIndex
             setTimeout(() => {
-                this.contacts[this.activeIndex].messages.push(this.newMexReceived)
+                this.contacts[chatindex].messages.push(this.newMexReceived)
             }, 2000)
         },
 
@@ -245,6 +244,6 @@ const app = Vue.createApp({
 
 
 
-//    TO FIX  DELETE MEX / INDEX FIX ON RECEVIED 
+
 
    
